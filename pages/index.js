@@ -96,6 +96,13 @@ var o = 0;
  if (typeof window.ethereum !== "undefined") {
       setHasMetamask(true);
     }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-7FK9RR12NT');
+
   }, []);
 
   const {
@@ -171,7 +178,8 @@ var o = 0;
     <meta property="og:url" content="" />
         <link rel="icon" href="/logo.ico" />
       </Head>
-      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FK9RR12NT"></script>
+
       <div style={{height:'100vh'}}>
       {active ? (
         userValuesLoading ? (<div id="loadingSequence" className={styles.loading}></div>
